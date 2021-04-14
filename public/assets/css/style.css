@@ -1,0 +1,31 @@
+main {
+    background-color: black;
+}
+
+
+.slider-moto {
+    width:90%;
+    margin: auto;
+    height: auto;
+}
+
+.image-moto {
+    max-width: 1600px;
+    min-width: 500px;
+    height: 800px;
+}
+
+.moto1 {
+    background: url(https://static.turbosquid.com/Preview/000342/065/O7/Z.jpg)center no-repeat;
+    background-size: cover;
+}
+
+.moto2 {
+    background: url(https://static.turbosquid.com/Preview/2015/04/09__11_30_34/ducati_1199_0006.jpgd267f41c-a6f8-4b97-8554-5537430443aaDefaultHQ.jpg)center no-repeat;
+    background-size: cover;
+}
+
+.moto3 {
+    background: url(https://static.turbosquid.com/Preview/001167/138/QO/DHQ.jpg)center no-repeat;
+    background-size: cover;
+}
