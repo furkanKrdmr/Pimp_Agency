@@ -1,3 +1,4 @@
+/* Début du slider choix de couleur fait par Furkan */
 * {
     margin: 0;
     padding: 0;
@@ -5,7 +6,7 @@
 }
 
 .slider {
-    width: 500px;
+    max-width: 500px;
     margin: 0 auto;
 }
 
