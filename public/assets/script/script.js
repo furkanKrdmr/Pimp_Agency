@@ -1,3 +1,4 @@
+//Début du slider choix de couleur fait par furkan
 $('.slider').slick({
   dots: true,
   infinite: false,
@@ -28,17 +29,8 @@ $('.slider').slick({
         slidesToScroll: 2
       }
     }
-    // You can unslick at a given breakpoint now by adding:
-    // settings: "unslick"
-    // instead of a settings object
   ]
 });
 
-  $('.slider-moto').slick({
-    dots: true,
-    infinite: true,
-    speed: 500,
-    fade: true,
-    cssEase: 'linear',
-    centerMode: true
-  });
+
+
