@@ -1,5 +1,18 @@
-//Début du slider choix de couleur fait par furkan
-$('.slider').slick({
+   //Début js slider moto
+
+$('.slider-moto').slick
+({
+    dots: true,
+    infinite: true,
+    speed: 500,
+    fade: true,
+    cssEase: 'linear'});
+  
+    //fin js slider moto
+
+    //Début du slider choix de couleur fait par furkan
+$('.slider').slick
+({
   dots: true,
   infinite: false,
   speed: 300,
@@ -29,8 +42,4 @@ $('.slider').slick({
         slidesToScroll: 2
       }
     }
-  ]
-});
-
-
-
+  ]});

@@ -1,3 +1,16 @@
+/* Début css slider moto */
+
+main {
+    background-color: grey;
+}
+
+
+.slider-moto {
+    margin: 0 auto;
+} 
+
+/* Fin css slider moto */
+
 /* Début du slider choix de couleur fait par Furkan */
 * {
     margin: 0;
@@ -6,7 +19,7 @@
 }
 
 .slider {
-    max-width: 500px;
+    
     margin: 0 auto;
 }
 
@@ -19,6 +32,7 @@
 }
 
 .div1 {
+    height: 100px;
     background-color: blue;
 }
 
