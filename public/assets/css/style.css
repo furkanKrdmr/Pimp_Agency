@@ -80,10 +80,7 @@ h2 {
   text-align: center;
   
 }
-@font-face {
-    font-family: Pirata One;
-    src: url("https://fonts.googleapis.com/css2?family=Pirata+One&display=swap");
-}
+
 .banner {
   
   color: orange;
