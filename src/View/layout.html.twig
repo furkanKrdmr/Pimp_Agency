@@ -8,15 +8,29 @@
 		<title>
 			{% block title %}{% endblock %}
 		</title>
+		<link rel="icon" href="/assets/images/favicon.png">
+		<link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css"> 
 		{% block stylesheet %}{% endblock %}
 		<link rel="stylesheet" href="/assets/css/style.css">
-		<link rel="icon" href="/assets/images/favicon.png">
 
 
 	</head>
 
 	<body>
+
+		<header>
+
+			{% include "Item/header.html.twig" %}
+			
+		</header>
+
 		{% block content %}{% endblock %}
 		{% block javascript %}{% endblock %}
+
+		<footer>
+
+			{% include "Item/footer.html.twig" %}
+
+		</footer>
 	</body>
 </html>
