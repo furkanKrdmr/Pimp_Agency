@@ -173,14 +173,6 @@ $(document).ready(function () {
     ],
   });
 
-  /**$(".slick-next").click(function () {
-    if ($("#title:contains('couleur')")) {
-      $("#title").text("Choisissez votre rétroviseurs");
-    } else if ($("#title:contains('rétroviseurs')")) {
-      $("#title").text("Choisissez votre selle");
-    }
-  });**/
-
   $(".slick-next").click(function () {
   if($('#title').text().indexOf('couleur')){
     $("#title").text("Choisissez votre rétroviseurs");
