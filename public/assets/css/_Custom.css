@@ -1,0 +1,56 @@
+body {
+    margin: 0;
+    padding: 0;
+    background-color: grey;
+}
+
+.cont-img{
+    margin: 0 auto;
+}
+    
+img{
+    height: 650px;
+
+}
+.container {
+    width: 400px;
+    border-radius: 5px;
+    margin: 0 auto;
+
+}
+
+.img-div {
+    height: 100px;
+    border-radius: 50%;
+    border: solid 2px black;
+
+}
+
+
+.div1 {
+    background-color: blue;
+}
+
+.div2 {
+    background-color: green;
+}
+
+.div3 {
+    background-color: red;
+}
+
+.div4 {
+    background-color: yellow;
+}
+
+.div5 {
+    background-color: black;
+}
+
+
+@media only screen and (min-device-width : 320px) and (max-device-width : 480px) {
+
+    .container{
+        width:300px;
+    }
+}
