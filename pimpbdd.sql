@@ -14,7 +14,7 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
+CREATE SCHEMA IF NOT EXISTS `projet` DEFAULT CHARACTER SET utf8 ;
 -- -----------------------------------------------------
 -- Schema projet
 -- -----------------------------------------------------
@@ -23,7 +23,7 @@ CREATE SCHEMA IF NOT EXISTS `mydb` DEFAULT CHARACTER SET utf8 ;
 -- Schema projet
 -- -----------------------------------------------------
 CREATE SCHEMA IF NOT EXISTS `projet` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8mb4_0900_ai_ci ;
-USE `mydb` ;
+USE `projet` ;
 
 -- -----------------------------------------------------
 -- Table `projet`.`category`
@@ -72,9 +72,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`model`
+-- Table `projet`.`model`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`model` (
+CREATE TABLE IF NOT EXISTS `projet`.`model` (
   `idtable1` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(55) NOT NULL,
   `reference` VARCHAR(55) NOT NULL,
@@ -163,9 +163,9 @@ COLLATE = utf8mb4_0900_ai_ci;
 
 
 -- -----------------------------------------------------
--- Table `mydb`.`lignOrder`
+-- Table `projet`.`lignOrder`
 -- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `mydb`.`lignOrder` (
+CREATE TABLE IF NOT EXISTS `projet`.`lignOrder` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `quantityLign` INT NOT NULL,
   `article_id` INT NOT NULL,
@@ -214,3 +214,12 @@ COLLATE = utf8mb4_0900_ai_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+ 
+
+
+
+
+
