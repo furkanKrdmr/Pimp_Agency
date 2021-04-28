@@ -26,6 +26,6 @@ class HomeController extends AbstractController
 
     public function cgv()
     {
-        return $this->twig->render('Home/terms_conditions.html.twig');
+        return $this->twig->render('Home/cgv.html.twig');
     }
 }

@@ -75,7 +75,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 -- Table `projet`.`model`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `projet`.`model` (
-  `idtable1` INT NOT NULL AUTO_INCREMENT,
+  `id` INT NOT NULL AUTO_INCREMENT,
   `name` VARCHAR(55) NOT NULL,
   `reference` VARCHAR(55) NOT NULL,
   `defaultPrice` INT NOT NULL,
@@ -111,6 +111,7 @@ CREATE TABLE IF NOT EXISTS `projet`.`customer` (
   `city` VARCHAR(55) NOT NULL,
   `phoneNumber` INT NULL DEFAULT NULL,
   `mail` VARCHAR(100) NOT NULL,
+  'password'VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
 DEFAULT CHARACTER SET = utf8mb4
