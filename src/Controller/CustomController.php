@@ -31,7 +31,7 @@ class CustomController extends AbstractController
             $item = array_map('trim', $_POST);
             $config = new CustomManager();
             $configs = $config->insertConfig($item);
-            return $this->twig->render('Custom/custom.html.twig', ['configs' => $configs]);
+            return $this->twig->render('Custom/custom.html.twig');
         }
     }
 }
