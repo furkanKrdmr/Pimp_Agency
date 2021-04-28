@@ -26,47 +26,47 @@
 			<div class="img-div div2" onclick="imgMoto2()"></div>
 		</div>
 		<div class="slider-1">
-			<div class="img-div div1" id="moto_bleu" onclick="imgFullBlue()"></div>
+			<div class="img-div div1" onclick="imgFullBlue()"></div>
 			<div class="img-div div2" onclick="imgFullGreen()"></div>
 			<div class="img-div div3" onclick="imgFullRed()"></div>
 			<div class="img-div div4" onclick="imgFullYellow()"></div>
-			<div class="img-div div5" onclick=""></div>
+			
 		</div>
 
 		<div class="slider-2">
-			<div class="img-div div1" onclick="imgYellowBlue()"></div>
-			<div class="img-div div2"></div>
-			<div class="img-div div3"></div>
-			<div class="img-div div4"></div>
-			<div class="img-div div5"></div>
+			<div class="img-div div1"onclick="retroBlue()"></div>
+			<div class="img-div div2"onclick="retroGreen()"></div>
+			<div class="img-div div3"onclick="retroRed()"></div>
+			<div class="img-div div4"onclick="retroYellow()"></div>
+			
 		</div>
 
 		<div class="slider-3">
-			<div class="img-div div1"></div>
-			<div class="img-div div2"></div>
-			<div class="img-div div3"></div>
-			<div class="img-div div4"></div>
-			<div class="img-div div5"></div>
+			<div class="img-div div1" onclick="selleBlue()"></div>
+			<div class="img-div div2"onclick="selleGreen()"></div>
+			<div class="img-div div3"onclick="selleRed()"></div>
+			<div class="img-div div4"onclick="selleYellow()"></div>
+			
 		</div>
 	</div>
 
-	{{ item }}
+	
 
 <form action="/Custom/saveConfig" method="POST">
 
-        <input type="text" id="name_moto" name="moto" value="moto">
+        <input type="hidden" id="name_moto" name="moto" value="moto">
 
-        <input type="text" id="couleur_moto" name="couleur_moto" value="couleur_moto">
+        <input type="hidden" id="couleur_moto" name="couleur_moto" value="couleur_moto">
 
-        <input type="text" id="couleur_retro" name="couleur_retro" value="couleur_retro">
+        <input type="hidden" id="couleur_retro" name="couleur_retro" value="couleur_retro">
 
-        <input type="text" id="couleur_selle" name="couleur_selle" value="couleur_selle">
+        <input type="hidden" id="couleur_selle" name="couleur_selle" value="couleur_selle">
 
-        <input type="text" id="prix_moto" name="prix_moto" value="1">
+        <input type="hidden" id="prix_moto" name="prix_moto" value="1">
 
-        <input type="text" id="prix_retroviseur" name="prix_retro" value="1">
+        <input type="hidden" id="prix_retro" name="prix_retro" value="1">
 
-        <input type="text" id="prix_selle" name="prix_selle" value="1">
+        <input type="hidden" id="prix_selle" name="prix_selle" value="1">
 
         <input type="submit" value="Enregister">
     </form>

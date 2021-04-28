@@ -271,6 +271,7 @@ $(document).ready(function () {
 function imgMoto1() {
   let imageId = document.getElementById("image");
   document.getElementById('name_moto').setAttribute('value', 'Aprilia');
+  document.getElementById('prix_moto').setAttribute('value', 15000);
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/aprilia1480x800.png";
   }
@@ -319,10 +320,79 @@ function imgFullBlue() {
   }
 }
 
-function imgYellowBlue() {
+
+
+function retroYellow() {
   let imageId = document.getElementById("image");
-  if (imageId.getAttribute("src") == "../assets/Images/Jaune/moto-Y-B-B.jpg") {
-    imageId.src = "../assets/Images/Jaune/moto-Y-Bl-Bl.jpg";
+  document.getElementById('couleur_retro').setAttribute('value', 'Jaune');
+  document.getElementById('prix_retro').setAttribute('value', 90);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
+  }
+}
+
+function retroBlue() {
+  let imageId = document.getElementById("image");
+  document.getElementById('couleur_retro').setAttribute('value', 'bleu');
+  document.getElementById('prix_retro').setAttribute('value', 80);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
+  }
+}
+
+function retroGreen() {
+  let imageId = document.getElementById("image");
+  document.getElementById('couleur_retro').setAttribute('value', 'vert');
+  document.getElementById('prix_retro').setAttribute('value', 70);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
+  }
+}
+
+function retroRed() {
+  let imageId = document.getElementById("image");
+  document.getElementById('couleur_retro').setAttribute('value', 'rouge');
+  document.getElementById('prix_retro').setAttribute('value', 100);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
+  }
+}
+
+
+
+function selleYellow() {
+  let imageId = document.getElementById("image");
+  document.getElementById('couleur_selle').setAttribute('value', 'Jaune');
+  document.getElementById('prix_selle').setAttribute('value', 190);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
+  }
+}
+
+function selleBlue() {
+  let imageId = document.getElementById("image");
+  document.getElementById('couleur_selle').setAttribute('value', 'bleu');
+  document.getElementById('prix_selle').setAttribute('value', 480);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
+  }
+}
+
+function selleGreen() {
+  let imageId = document.getElementById("image");
+  document.getElementById('couleur_selle').setAttribute('value', 'vert');
+  document.getElementById('prix_selle').setAttribute('value', 570);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
+  }
+}
+
+function selleRed() {
+  let imageId = document.getElementById("image");
+  document.getElementById('couleur_selle').setAttribute('value', 'rouge');
+  document.getElementById('prix_selle').setAttribute('value', 700);
+  if (imageId.src !== undefined) {
+    imageId.src = "../assets/Images/img/constru.jpg";
   }
 }
 
