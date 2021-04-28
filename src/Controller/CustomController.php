@@ -25,13 +25,13 @@ class CustomController extends AbstractController
     {
         return $this->twig->render('Custom/custom.html.twig');
     }
-    public function saveConfig(): string
+    public function saveConfig()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $item = array_map('trim', $_POST);
-            $config = new CustomManager;
+            $config = new CustomManager();
             $configs = $config->insertConfig($item);
-            return $this->twig->render('Custom/custom.html.twig');
+            return $this->twig->render('Custom/custom.html.twig', ['configs' => $configs]);
         }
     }
 }
