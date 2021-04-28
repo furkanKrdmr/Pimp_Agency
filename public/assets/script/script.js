@@ -287,7 +287,7 @@ function imgMoto2() {
 
 function imgFullYellow() {
   let imageId = document.getElementById("image");
-  document.getElementById('couleur_moto').setAttribute('value', 'Jaune');
+  document.getElementById('couleur_moto').setAttribute('value','Jaune');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/Jaune/moto-Y-B-B.jpg";
   }
@@ -295,6 +295,7 @@ function imgFullYellow() {
 
 function imgFullRed() {
   let imageId = document.getElementById("image");
+  document.getElementById('couleur_moto').setAttribute('value','Rouge');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/Jaune/moto-R-B-B.jpg";
   }
@@ -302,20 +303,15 @@ function imgFullRed() {
 
 function imgFullGreen() {
   let imageId = document.getElementById("image");
+  document.getElementById('couleur_moto').setAttribute('value','Vert');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/Jaune/moto-G-B-B.jpg";
   }
 }
 
-function imgFullYellow() {
-  let imageId = document.getElementById("image");
-  if (imageId.src !== undefined) {
-    imageId.src = "../assets/Images/Jaune/moto-Y-B-B.jpg";
-  }
-}
 function imgFullBlue() {
   let imageId = document.getElementById("image");
-  document.getElementById('name_moto').setAttribute('value', 'furkan');
+  document.getElementById('couleur_moto').setAttribute('value', 'blue');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/Jaune/moto-Bl-B-B.jpg";
 
