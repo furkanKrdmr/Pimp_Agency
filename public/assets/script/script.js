@@ -231,6 +231,7 @@ function imgYellowBlue() {
     imageId.src = "../assets/Images/Jaune/moto-Y-Bl-Bl.jpg";
   }
 }
+
 /*  fin Custom.html.twig fait par furkan */
 //Début js slider moto
 

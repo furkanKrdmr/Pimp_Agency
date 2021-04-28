@@ -9,6 +9,8 @@
 
 namespace App\Controller;
 
+use App\Model\CustomManager;
+
 class CustomController extends AbstractController
 {
     /**
@@ -22,5 +24,14 @@ class CustomController extends AbstractController
     public function custom()
     {
         return $this->twig->render('Custom/custom.html.twig');
+    }
+    public function saveConfig(): string
+    {
+        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+            $item = array_map('trim', $_POST);
+            $config = new CustomManager;
+            $configs = $config->insertConfig($item);
+            return $this->twig->render('Custom/custom.html.twig');
+        }
     }
 }
