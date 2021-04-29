@@ -32,41 +32,8 @@ main {
     margin: 0 auto;
 }
 
-.img-div {
-    height: 100px;
-    width: auto;
-    margin: 0 15px;
-    border-radius: 100%;
-    border: solid 2px black;
-}
+ 
 
-.div1 {
-    height: 100px;
-    background-color: blue;
-}
-
-.div2 {
-    background-color: green;
-}
-
-.div3 {
-    background-color: red;
-}
-
-.div4 {
-    background-color: yellow;
-}
-
-.div5 {
-    background-color: black;
-}
-
-.spe {
-    border-bottom: solid 3px grey;
-    text-align: center;
-}
-
-/* Fin du slider choix de couleur */
 
 /* Début css slider vitrine */
 
@@ -283,7 +250,7 @@ h6 {
         background-color: black;
     }
 
-    a {
+    .navbar, .dropdown-menu  {
         font-family: 'Pirata One', cursive;
         font-size: x-large;
     }
@@ -296,4 +263,3 @@ h6 {
 
     /*fin css header*/
     
-
