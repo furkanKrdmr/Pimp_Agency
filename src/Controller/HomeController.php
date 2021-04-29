@@ -28,4 +28,9 @@ class HomeController extends AbstractController
     {
         return $this->twig->render('Home/cgv.html.twig');
     }
+
+    public function legal()
+    {
+        return $this->twig->render('Home/legal_properties.html.twig');
+    }
 }
