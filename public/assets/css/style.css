@@ -34,82 +34,6 @@ main {
 
  
 
-
-/* Début css slider vitrine */
-
-.slider-vitrine {
-    margin: 0 auto;
-    padding: 0 !important;
-}
-
-h1 {
-    font-size: 100px;
-}
-
-h2 {
-    font-size: 62px;
-    font-weight: normal;
-    text-transform: uppercase;
-    letter-spacing: 4px;
-}
-
-
-.banner h1,
-.banner h2,
-h6 {
-    margin: 0;
-    text-shadow: 6px 6px 13px #000;
-    text-align: center;
-
-}
-
-.banner {
-
-    color: orange;
-    background: url('https://www.planet-ride.com/wp-content/uploads/2018/05/BANNIERE-INDIA.jpg') center/cover no-repeat;
-    height: 250px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin: 0;
-    padding: 0 !important;
-
-    font-family: 'Pirata One', cursive;
-}
-
-@media(min-width: 768px) and (max-width: 1000px) {
-
-
-
-    .banner {
-
-        width: 100%;
-
-        padding: 0px;
-
-    }
-
-
-
-
-
-
-
-    .banner h1,
-    .banner h2,
-    h6 {
-
-        width: 80%;
-        font-size: 50px;
-
-    }
-
-
-
-}
-
-/* Fin du slider choix de couleur */
-
 @media(max-width: 767px) {
 
 
@@ -655,7 +579,7 @@ h6 {
         background-color: black;
     }
 
-    a {
+    .navbar, .dropdown-menu  {
         font-family: 'Pirata One', cursive;
         font-size: x-large;
     }
@@ -668,4 +592,3 @@ h6 {
 
     /*fin css header*/
     
-

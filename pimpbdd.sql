@@ -10,11 +10,6 @@ SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='ONLY_FULL_GROUP_BY,STRICT_TRANS_TABLES,N
 -- -----------------------------------------------------
 -- Schema mydb
 -- -----------------------------------------------------
-
--- -----------------------------------------------------
--- Schema mydb
--- -----------------------------------------------------
-CREATE SCHEMA IF NOT EXISTS `projet` DEFAULT CHARACTER SET utf8 ;
 -- -----------------------------------------------------
 -- Schema projet
 -- -----------------------------------------------------
@@ -26,80 +21,6 @@ CREATE SCHEMA IF NOT EXISTS `projet` DEFAULT CHARACTER SET utf8mb4 COLLATE utf8m
 USE `projet` ;
 
 -- -----------------------------------------------------
--- Table `projet`.`category`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `projet`.`category` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `Name` VARCHAR(200) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
-
-
--- -----------------------------------------------------
--- Table `projet`.`article`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `projet`.`article` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(55) NOT NULL,
-  `description` TEXT NOT NULL,
-  `quantityStock` INT NOT NULL,
-  `category_id` INT NOT NULL,
-  PRIMARY KEY (`id`, `category_id`),
-  INDEX `fk_article_category1_idx` (`category_id` ASC) VISIBLE,
-  CONSTRAINT `fk_article_category1`
-    FOREIGN KEY (`category_id`)
-    REFERENCES `projet`.`category` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
-
-
--- -----------------------------------------------------
--- Table `projet`.`color`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `projet`.`color` (
-  `id` INT NOT NULL AUTO_INCREMENT,
-  `reference` VARCHAR(55) NOT NULL,
-  `name` VARCHAR(55) NOT NULL,
-  PRIMARY KEY (`id`))
-ENGINE = InnoDB
-DEFAULT CHARACTER SET = utf8mb4
-COLLATE = utf8mb4_0900_ai_ci;
-
-
--- -----------------------------------------------------
--- Table `projet`.`model`
--- -----------------------------------------------------
-CREATE TABLE IF NOT EXISTS `projet`.`model` (
-  `idtable1` INT NOT NULL AUTO_INCREMENT,
-  `name` VARCHAR(55) NOT NULL,
-  `reference` VARCHAR(55) NOT NULL,
-  `defaultPrice` INT NOT NULL,
-  `vat` INT NOT NULL,
-  `totalPrice` INT NOT NULL,
-  `article_id` INT NOT NULL,
-  `color_id` INT NOT NULL,
-  PRIMARY KEY (`idtable1`, `article_id`, `color_id`),
-  INDEX `fk_model_article1_idx` (`article_id` ASC) VISIBLE,
-  INDEX `fk_model_color1_idx` (`color_id` ASC) VISIBLE,
-  CONSTRAINT `fk_model_article1`
-    FOREIGN KEY (`article_id`)
-    REFERENCES `projet`.`article` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION,
-  CONSTRAINT `fk_model_color1`
-    FOREIGN KEY (`color_id`)
-    REFERENCES `projet`.`color` (`id`)
-    ON DELETE NO ACTION
-    ON UPDATE NO ACTION)
-ENGINE = InnoDB;
-
-
--- -----------------------------------------------------
 -- Table `projet`.`customer`
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `projet`.`customer` (
@@ -109,8 +30,8 @@ CREATE TABLE IF NOT EXISTS `projet`.`customer` (
   `address` VARCHAR(100) NOT NULL,
   `postal_code` INT NOT NULL,
   `city` VARCHAR(55) NOT NULL,
-  `phone_number` INT NULL DEFAULT NULL,
-  `email` VARCHAR(100) NOT NULL,
+  `phoneNumber` INT NULL DEFAULT NULL,
+  `mail` VARCHAR(100) NOT NULL,
   `password` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -161,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `projet`.`model` (
   `couleur_selle` VARCHAR(20) NOT NULL,
   `prix_moto` INT NOT NULL,
   `prix_retro` INT NOT NULL,
-  `prix_sellle` INT NOT NULL,
+  `prix_selle` INT NOT NULL,
   `customer_id` INT NOT NULL,
   PRIMARY KEY (`id`, `customer_id`),
   INDEX `fk_model_customer1_idx` (`customer_id` ASC) VISIBLE,
@@ -178,12 +99,3 @@ COLLATE = utf8mb4_0900_ai_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
-
-
-
- 
-
-
-
-
-
