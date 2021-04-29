@@ -25,13 +25,13 @@ USE `projet` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `projet`.`customer` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `lastName` VARCHAR(55) NOT NULL,
-  `firstName` VARCHAR(55) NOT NULL,
+  `lastname` VARCHAR(55) NOT NULL,
+  `firstname` VARCHAR(55) NOT NULL,
   `address` VARCHAR(100) NOT NULL,
-  `postalCode` INT NOT NULL,
+  `postal_code` INT NOT NULL,
   `city` VARCHAR(55) NOT NULL,
-  `phoneNumber` INT NULL DEFAULT NULL,
-  `mail` VARCHAR(100) NOT NULL,
+  `phone_number` INT NULL DEFAULT NULL,
+  `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
