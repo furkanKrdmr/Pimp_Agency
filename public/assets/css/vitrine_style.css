@@ -1,36 +1,114 @@
 /* Début css slider vitrine */
 
 .slider-vitrine {
-    margin: 0 auto;
-    
-} 
+  margin: 0 auto;
+  padding: 0 !important;
+}
 
-h1 { font-size: 100px; }
+h1 {
+  font-size: 100px;
+}
+
 h2 {
-  font-size: 52px;
+  font-size: 62px;
   font-weight: normal;
   text-transform: uppercase;
   letter-spacing: 4px;
 }
 
+.banner-text {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
 
-.banner h1, .banner h2, .banner h6 {
+
+.banner h1,
+.banner h2 {
   margin: 0;
-  text-shadow: 2px 2px 6px #000;
+  text-shadow: 6px 6px 13px #000;
   text-align: center;
-  
+
 }
 
 .banner {
-  
+
   color: orange;
   background: url('https://www.planet-ride.com/wp-content/uploads/2018/05/BANNIERE-INDIA.jpg') center/cover no-repeat;
-  height: 300px;
+  height: 250px;
   display: flex;
   justify-content: center;
   align-items: center;
   margin: 0;
-  padding: 0;
+  padding: 0 !important;
+
   font-family: 'Pirata One', cursive;
 }
+
+@media(min-width: 768px) and (max-width: 1388px) {
+
+
+
+  .banner {
+
+    width: 100%;
+    padding: 0px !important;
+    text-align: center;
+
+  }
+
+
+  .banner h1,
+  .banner h2 {
+    font-size: 50px;
+
+  }
+
+
+
+}
+
+@media(min-width: 426px) and (max-width: 767px) {
+
+
+
+  .banner {
+
+    width: 100%;
+    padding: 0px !important;
+    text-align: center;
+
+  }
+
+
+  .banner h1,
+  .banner h2 {
+    font-size: 50px;
+
+  }
+
+
+
+}
+
+@media (max-width: 425px) {
+
+  .banner {
+
+    width: 100%;
+
+    padding: 0px !important;
+    text-align: center;
+
+  }
+
+  .banner h1,
+  .banner h2 {
+
+    font-size: 50px;
+
+  }
+
+}
+
 /* fin css slider vitrine */

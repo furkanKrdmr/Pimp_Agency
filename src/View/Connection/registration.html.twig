@@ -1,0 +1,67 @@
+{% extends 'layout.html.twig' %}
+
+
+
+{% block content %}
+
+	<form action="/Connection/saveRegistration" method="POST">
+		<h2 class="text-center">Inscription</h2>
+
+		<div class="container_form">
+			<div class="form-group">
+
+				<input type="text" name="lastname" class="form-control" placeholder="Indiquer votre nom" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="text" name="firstname" class="form-control" placeholder="Indiquer votre prénom" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="text" name="address" class="form-control" placeholder="Indiquer votre adresse" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="number" name="postal_code" class="form-control" placeholder="Code postal" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="text" name="city" class="form-control" placeholder="Ville" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="tel" name="phone_number" class="form-control" placeholder="Téléphone" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off"><br>
+			</div>
+
+			<div class="form-group">
+
+				<input type="password" name="cpwd" class="form-control" placeholder="Confirmation du mot de passe" required="required" autocomplete="off"><br>
+			</div>
+
+
+			<div class="form-group">
+				<button type="submit" class="btn btn-primary btn-block">Inscription</button>
+			</div>
+		</div>
+
+	</form>
+
+	
+
+
+{% endblock %}
