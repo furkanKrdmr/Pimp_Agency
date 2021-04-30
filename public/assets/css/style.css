@@ -32,11 +32,6 @@ main {
     margin: 0 auto;
 }
 
- 
-
-
-
-
     /*debut css header Remi */
 
     ul {
@@ -52,10 +47,12 @@ main {
         justify-content: center;
         align-items: center;
         color: #fff;
-        font-size: 14px;
+        font-size: 24px;
         border-radius: 7px;
         margin-right: 11px;
         cursor: pointer;
+        list-style: none;
+        text-decoration: none;
     }
 
     .social-twitter {
@@ -81,6 +78,7 @@ main {
 
     .social-icon i {
         transition: 0.4s all;
+       
     }
 
     .social-icon:hover i {
@@ -96,6 +94,7 @@ main {
 
     .social-twitter {
         background-color: #55acee;
+        
     }
 
     .social-facebook {
@@ -104,15 +103,15 @@ main {
 
     .social-linkedin {
         background-color: #0077B5;
+        list-style: none;
+        text-decoration: none;
     }
 
     .social-panier {
         background-color: orange;
+        
 
     }
-
-
-
 
     .social-instagram {
         background-color: #dd4b39;
@@ -126,15 +125,7 @@ main {
         transform: scale(1.1);
     }
 
-    .d-flex {
-
-        justify-content: flex-end;
-    }
-
-    .btn {
-        color: orange;
-
-    }
+   
 
     .btn-outline-success:hover {
         background-color: orange;
@@ -147,14 +138,17 @@ main {
     }
 
     .navbar-collapse {
-        justify-content: space-between;
+        
         padding: 0 !important;
         background-color: black;
+        list-style: none;
+        
     }
 
     .navbar, .dropdown-menu  {
         font-family: 'Pirata One', cursive;
         font-size: x-large;
+        
     }
 
     .bg-dark {
@@ -174,7 +168,7 @@ main {
     font-weight: bold;
     font-size: 16px;
     padding: 50px;
-    margin-top: 50px;
+    margin-top: 0px;
   }
   
   .footer .footer-left,
@@ -330,3 +324,12 @@ main {
     }
   }
 /* fin du footer */
+
+/* CSS formulaire d'inscription by Pascal */
+
+  .form-group{
+      width: 20%;
+      margin-left: 15px;
+    }
+
+/* fin du CSS formulaire d'inscription by Pascal */

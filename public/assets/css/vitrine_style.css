@@ -16,10 +16,15 @@ h2 {
   letter-spacing: 4px;
 }
 
+.banner-text {
+  width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 
 .banner h1,
-.banner h2,
-h6 {
+.banner h2 {
   margin: 0;
   text-shadow: 6px 6px 13px #000;
   text-align: center;
@@ -40,30 +45,22 @@ h6 {
   font-family: 'Pirata One', cursive;
 }
 
-@media(min-width: 768px) and (max-width: 1000px) {
+@media(min-width: 768px) and (max-width: 1388px) {
 
 
 
   .banner {
 
-      width: 100%;
-
-      padding: 0px;
+    width: 100%;
+    padding: 0px !important;
+    text-align: center;
 
   }
 
 
-
-
-
-
-
   .banner h1,
-  .banner h2,
-  h6 {
-
-      width: 80%;
-      font-size: 50px;
+  .banner h2 {
+    font-size: 50px;
 
   }
 
@@ -71,29 +68,47 @@ h6 {
 
 }
 
-@media(max-width: 767px) {
+@media(min-width: 426px) and (max-width: 767px) {
 
 
 
   .banner {
 
-      width: 100%;
+    width: 100%;
+    padding: 0px !important;
+    text-align: center;
 
-      padding: 0px;
+  }
+
+
+  .banner h1,
+  .banner h2 {
+    font-size: 50px;
 
   }
 
 
 
+}
+
+@media (max-width: 425px) {
+
+  .banner {
+
+    width: 100%;
+
+    padding: 0px !important;
+    text-align: center;
+
+  }
 
   .banner h1,
-  .banner h2,
-  h6 {
+  .banner h2 {
 
-      width: 80%;
-      font-size: 50px;
+    font-size: 50px;
 
   }
 
 }
-  /* fin css slider vitrine */
+
+/* fin css slider vitrine */
