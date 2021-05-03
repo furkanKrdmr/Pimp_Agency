@@ -25,10 +25,10 @@ USE `projet` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `projet`.`customer` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `lastname` VARCHAR(55) NOT NULL,
-  `firstname` VARCHAR(55) NOT NULL,
+  `lastName` VARCHAR(55) NOT NULL,
+  `firstName` VARCHAR(55) NOT NULL,
   `address` VARCHAR(100) NOT NULL,
-  `postal_code` INT NOT NULL,
+  `postalCode` INT NOT NULL,
   `city` VARCHAR(55) NOT NULL,
   `phoneNumber` INT NULL DEFAULT NULL,
   `mail` VARCHAR(100) NOT NULL,
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `projet`.`model` (
   `couleur_selle` VARCHAR(20) NOT NULL,
   `prix_moto` INT NOT NULL,
   `prix_retro` INT NOT NULL,
-  `prix_selle` INT NOT NULL,
+  `prix_sellle` INT NOT NULL,
   `customer_id` INT NOT NULL,
   PRIMARY KEY (`id`, `customer_id`),
   INDEX `fk_model_customer1_idx` (`customer_id` ASC) VISIBLE,
@@ -99,3 +99,12 @@ COLLATE = utf8mb4_0900_ai_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+
+
+
+ 
+
+
+
+
+
