@@ -30,8 +30,8 @@ CREATE TABLE IF NOT EXISTS `projet`.`customer` (
   `address` VARCHAR(100) NOT NULL,
   `postal_code` INT NOT NULL,
   `city` VARCHAR(55) NOT NULL,
-  `phoneNumber` INT NULL DEFAULT NULL,
-  `mail` VARCHAR(100) NOT NULL,
+  `phone_number` INT NULL DEFAULT NULL,
+  `email` VARCHAR(100) NOT NULL,
   `password` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
