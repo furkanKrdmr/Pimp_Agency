@@ -13,65 +13,80 @@
 
 {% block content %}
 
+
+	<form  class="form-custom"action="/Custom/saveConfig" method="POST" id="form-custom">
+
+		<input class="custom" type="hidden" id="name_moto" name="moto" value="moto">
+
+		<input class="custom" type="hidden" id="couleur_moto" name="couleur_moto" value="couleur_moto">
+
+		<input class="custom" type="hidden" id="couleur_retro" name="couleur_retro" value="couleur_retro">
+
+		<input class="custom" type="hidden" id="couleur_selle" name="couleur_selle" value="couleur_selle">
+		
+		
+		
+		<input class="custom" type="texte" id="prix_moto" name="prix_moto" value="" disabled>
+		
+		
+		
+		<input class="custom" type="text" id="prix_retro" name="prix_retro" value="" disabled>
+	
+		
+		
+		<input class="custom" type="text" id="prix_selle" name="prix_selle" value="" disabled>
+		
+		
+		<input type="submit" value="Enregister" class="custom">
+	</form>
+
 	<div class="col-12 col-md-8 col-lg-8 col-sm-12 cont-img">
-		<img src="../assets/Images/Jaune/moto-Y-B-B.jpg" id="image" class="img-responsive img-fluid w-100" alt="">
+		<img src="../assets/Images/Jaune/moto-Y-B-B.jpg" id="image" class="img-responsive" alt="">
 	</div>
 
 	<div class="titre text-center">
 		<h3 id="title">Choisissez votre moto</h3>
 	</div>
 
+
+
 	<div class="container col-3 col-lg-10">
 		<div class="slider-01">
 			<div class="img-div div1" onclick="imgMoto1()"></div>
 			<div class="img-div div2" onclick="imgMoto2()"></div>
 		</div>
+		
+		
+		
 		<div class="slider-1">
 			<div class="img-div div1" onclick="imgFullBlue()"></div>
 			<div class="img-div div2" onclick="imgFullGreen()"></div>
 			<div class="img-div div3" onclick="imgFullRed()"></div>
 			<div class="img-div div4" onclick="imgFullYellow()"></div>
-			
+
 		</div>
 
 		<div class="slider-2">
-			<div class="img-div div1"onclick="retroBlue()"></div>
-			<div class="img-div div2"onclick="retroGreen()"></div>
-			<div class="img-div div3"onclick="retroRed()"></div>
-			<div class="img-div div4"onclick="retroYellow()"></div>
-			
+			<div class="img-div div1" onclick="retroBlue()"></div>
+			<div class="img-div div2" onclick="retroGreen()"></div>
+			<div class="img-div div3" onclick="retroRed()"></div>
+			<div class="img-div div4" onclick="retroYellow()"></div>
+
 		</div>
 
 		<div class="slider-3">
 			<div class="img-div div1" onclick="selleBlue()"></div>
-			<div class="img-div div2"onclick="selleGreen()"></div>
-			<div class="img-div div3"onclick="selleRed()"></div>
-			<div class="img-div div4"onclick="selleYellow()"></div>
-			
+			<div class="img-div div2" onclick="selleGreen()"></div>
+			<div class="img-div div3" onclick="selleRed()"></div>
+			<div class="img-div div4" onclick="selleYellow()"></div>
+
 		</div>
 	</div>
+            
+					
+				
 
 	
-
-<form action="/Custom/saveConfig" method="POST">
-
-        <input type="hidden" id="name_moto" name="moto" value="moto">
-
-        <input type="hidden" id="couleur_moto" name="couleur_moto" value="couleur_moto">
-
-        <input type="hidden" id="couleur_retro" name="couleur_retro" value="couleur_retro">
-
-        <input type="hidden" id="couleur_selle" name="couleur_selle" value="couleur_selle">
-
-        <input type="hidden" id="prix_moto" name="prix_moto" value="1">
-
-        <input type="hidden" id="prix_retro" name="prix_retro" value="1">
-
-        <input type="hidden" id="prix_selle" name="prix_selle" value="1">
-
-        <input type="submit" value="Enregister">
-    </form>
-
 {% endblock %}
 
 {% block javascript %}
