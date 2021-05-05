@@ -23,6 +23,4 @@ class CustomManager extends AbstractManager
         $statement->execute();
         return (int)$this->pdo->lastInsertId();
     }
-
-    
 }
