@@ -9,6 +9,7 @@ class RegistrationManager extends AbstractManager
     /**
      * Insert new customer in database
      */
+
     public function insertCustomer(
         $lastname,
         $firstname,

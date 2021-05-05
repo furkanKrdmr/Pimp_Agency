@@ -329,7 +329,18 @@ body {
   
   .form-group{
       width: 20%;
-      margin-left: 15px;
+      align-self: center;
+      
+    }
+
+    .container_form{
+      display: flex;
+      justify-content: center;
+      flex-direction: column;
     }
   
+    .form-contact{
+      padding-top: 10px;
+      padding-bottom: 10px;
+    }
   /* fin du CSS formulaire d'inscription by Pascal */
