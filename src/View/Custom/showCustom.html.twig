@@ -1,0 +1,19 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+
+<ul class="d-flex flex-column">
+{% for listCustom in listCustoms %}
+<h1> Devis n° {{ listCustom.model_id }} </h1>
+    
+    <li> {{ listCustom.name_moto }} Prix: {{ listCustom.prix_moto }} </li> 
+    <li> Couleur:{{listCustom.couleur_moto}}  
+    <li> Couleur Rétroviseurs: {{listCustom.couleur_retro}} Prix: {{ listCustom.prix_retro }} </li>
+    <li> Couleur selle: {{listCustom.couleur_selle}} Prix: {{ listCustom.prix_selle }} </li>
+    <br>
+    <br>
+    <br>
+    <br>
+{% endfor %}
+</ul>
+
+{% endblock %}

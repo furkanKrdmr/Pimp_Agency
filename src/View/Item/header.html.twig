@@ -6,7 +6,7 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
-	<div class="  collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
+	<div class="  collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 
 		<li class="nav-item active">
 			<a class="nav-link" href="/Home/index">Home
@@ -21,7 +21,9 @@
 			<div class="dropdown-menu" aria-labelledby="navbarDropdown"></li>
 		</li>
 		<li class="nav-item">
-			<a class="nav-link" href="/assets/Images/img/constru.jpg">Contacter Nous</a>
+			{% if isConnected > 0 %}
+						<a class="nav-link" href="/Custom/showConfigUser">Mes commandes</a>
+					{% endif %}
 		</li>
 
 		<li class="nav-item dropdown">
