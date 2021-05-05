@@ -21,7 +21,12 @@ class HomeController extends AbstractController
      */
     public function index()
     {
-        return $this->twig->render('Home/index.html.twig');
+        $isConnected = false;
+        if (isset($_SESSION['connexion']) and $_SESSION['connexion'] === true) {
+            $isConnected = true;
+        }
+
+        return $this->twig->render('Home/index.html.twig', ['isConnected' => $isConnected]);
     }
 
     public function cgv()
