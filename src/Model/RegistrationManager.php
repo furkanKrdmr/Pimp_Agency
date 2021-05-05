@@ -1,5 +1,4 @@
 <?php
-
 namespace App\Model;
 
 class RegistrationManager extends AbstractManager

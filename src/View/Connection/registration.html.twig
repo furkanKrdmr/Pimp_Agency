@@ -1,13 +1,12 @@
 {% extends 'layout.html.twig' %}
 
 
-
 {% block content %}
 
 	<form action="/Connection/saveRegistration" method="POST" class="form-contact">
 		<h2 class="text-center">Inscription</h2>
 
-		<div class="container_form"> 
+		<div class="container_form">
 			<div class="form-group">
 
 				<input type="text" name="lastname" class="form-control md" placeholder="Indiquer votre nom" required="required" autocomplete="off"><br>
@@ -60,8 +59,6 @@
 		</div>
 
 	</form>
-
-	
 
 
 {% endblock %}

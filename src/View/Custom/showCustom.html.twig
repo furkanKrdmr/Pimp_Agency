@@ -2,6 +2,7 @@
 {% block content %}
 
 <ul class="d-flex flex-column">
+{{ set somme = 0}}
 {% for listCustom in listCustoms %}
 <h1> Devis n° {{ listCustom.model_id }} </h1>
     
@@ -9,6 +10,8 @@
     <li> Couleur:{{listCustom.couleur_moto}}  
     <li> Couleur Rétroviseurs: {{listCustom.couleur_retro}} Prix: {{ listCustom.prix_retro }} </li>
     <li> Couleur selle: {{listCustom.couleur_selle}} Prix: {{ listCustom.prix_selle }} </li>
+        {{ somme = listCustom.prix_moto + listCustom.prix_retro + prix_selle}}
+    <li> Total{{ somme }}
     <br>
     <br>
     <br>
