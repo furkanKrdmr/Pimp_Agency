@@ -10,6 +10,7 @@
 namespace App\Controller;
 
 use App\Model\CustomManager;
+use App\Controller\LoginController;
 
 class CustomController extends AbstractController
 {
@@ -23,7 +24,10 @@ class CustomController extends AbstractController
      */
     public function custom()
     {
-        return $this->twig->render('Custom/custom.html.twig');
+        if (isset($_SESSION['id']) && $_SESSION['id'] > 0) {
+            return $this->twig->render('Custom/custom.html.twig', ['isConnected' => true]);
+        }
+        return $this->twig->render('Connection/login.html.twig');
     }
     public function saveConfig()
     {
