@@ -1,29 +1,20 @@
 <?php
+
 namespace App\Model;
 
 class RegistrationManager extends AbstractManager
 {
     public const TABLE = 'customer';
-
-    /**
+/**
      * Insert new customer in database
      */
 
-    public function insertCustomer(
-        $lastname,
-        $firstname,
-        $address,
-        $postalCode,
-        $city,
-        $phoneNumber,
-        $email,
-        $password
-    ) {
+    public function insertCustomer($lastname, $firstname, $address, $postalCode, $city, $phoneNumber, $email, $password)
+    {
 
 
         $query = 'INSERT INTO customer (lastname, firstname, address, postal_code, city, phone_number, email, password)
                     VALUES (:lastname, :firstname, :address, :postal_code, :city, :phone_number, :email, :password);';
-
         $statement = $this->pdo->prepare($query);
         $statement->bindValue(':lastname', $lastname, \PDO::PARAM_STR);
         $statement->bindValue(':firstname', $firstname, \PDO::PARAM_STR);
