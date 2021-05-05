@@ -22,7 +22,7 @@ class HomeController extends AbstractController
     public function index()
     {
         $isConnected = false;
-        if (isset($_SESSION['connexion']) and $_SESSION['connexion'] === true) {
+        if (isset($_SESSION['id']) and $_SESSION['id'] > 0) {
             $isConnected = true;
         }
 
