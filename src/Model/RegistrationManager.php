@@ -39,3 +39,5 @@ class RegistrationManager extends AbstractManager
 /**
  * Update customer in database
  */
+
+

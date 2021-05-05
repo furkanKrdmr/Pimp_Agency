@@ -25,12 +25,12 @@ USE `projet` ;
 -- -----------------------------------------------------
 CREATE TABLE IF NOT EXISTS `projet`.`customer` (
   `id` INT NOT NULL AUTO_INCREMENT,
-  `lastName` VARCHAR(55) NOT NULL,
-  `firstName` VARCHAR(55) NOT NULL,
+  `lastname` VARCHAR(55) NOT NULL,
+  `firstname` VARCHAR(55) NOT NULL,
   `address` VARCHAR(100) NOT NULL,
-  `postalCode` INT NOT NULL,
+  `postal_code` INT NOT NULL,
   `city` VARCHAR(55) NOT NULL,
-  `phoneNumber` INT NULL DEFAULT NULL,
+  `phone_number` INT NULL DEFAULT NULL,
   `mail` VARCHAR(100) NOT NULL,
   `password` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
@@ -82,7 +82,7 @@ CREATE TABLE IF NOT EXISTS `projet`.`model` (
   `couleur_selle` VARCHAR(20) NOT NULL,
   `prix_moto` INT NOT NULL,
   `prix_retro` INT NOT NULL,
-  `prix_sellle` INT NOT NULL,
+  `prix_selle` INT NOT NULL,
   `customer_id` INT NOT NULL,
   PRIMARY KEY (`id`, `customer_id`),
   INDEX `fk_model_customer1_idx` (`customer_id` ASC) VISIBLE,
