@@ -31,7 +31,11 @@ CREATE TABLE IF NOT EXISTS `projet`.`customer` (
   `postal_code` INT NOT NULL,
   `city` VARCHAR(55) NOT NULL,
   `phone_number` INT NULL DEFAULT NULL,
+<<<<<<< HEAD
   `mail` VARCHAR(100) NOT NULL,
+=======
+  `email` VARCHAR(100) NOT NULL,
+>>>>>>> origin/dev
   `password` VARCHAR(100) NOT NULL,
   PRIMARY KEY (`id`))
 ENGINE = InnoDB
@@ -99,6 +103,7 @@ COLLATE = utf8mb4_0900_ai_ci;
 SET SQL_MODE=@OLD_SQL_MODE;
 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
+<<<<<<< HEAD
 
 
 
@@ -108,3 +113,5 @@ SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 
 
+=======
+>>>>>>> origin/dev

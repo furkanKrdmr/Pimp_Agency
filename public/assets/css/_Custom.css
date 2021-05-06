@@ -5,15 +5,17 @@ body {
 }
 
 .cont-img{
-    margin: 30px auto;
+    margin: 10px auto;
+    
 }
     
 #image{
-    height: 650px;
+    height: 410px;
+    
 
 }
 .container {
-    width: 400px;
+    width: 300px;
     border-radius: 5px;
     margin: 0 auto;
 
@@ -62,3 +64,20 @@ body {
         width:300px;
     }
 }
+
+.custom {
+    display: inline-block;
+    margin: 18px;
+    width: 180px;
+    background-color: gold;
+    border-radius: 20px;
+    text-align: center;
+   
+    
+}
+
+#form-custom {
+    display: flex;
+    justify-content: center;
+}
+

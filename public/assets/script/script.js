@@ -25,7 +25,7 @@ $(document).ready(function () {
           arrows: false,
           centerMode: true,
           centerPadding: "0px",
-          slidesToShow: 3,
+          slidesToShow: 1,
         },
       },
       {
@@ -253,13 +253,13 @@ $(document).ready(function () {
     } else if ($("#title").text().indexOf("couleur") !== -1){
       $("#title").text("Choisissez vos rétroviseurs");
     }else {
-      $("#title").text("Choisissez votre Selle");
+      $("#title").text("Choisissez la couleur de votre Selle");
     }
   });
 
   $(".slick-prev").click(function () {
     if ($("#title").text().indexOf("Selle") !== -1) {
-      $("#title").text("Choisissez vos rétroviseurs");
+      $("#title").text("Choisissez  rétroviseurs");
     } else if ($("#title").text().indexOf("rétroviseurs") !== -1){
       $("#title").text("Choisissez votre couleur");
     } else {
@@ -271,7 +271,7 @@ $(document).ready(function () {
 function imgMoto1() {
   let imageId = document.getElementById("image");
   document.getElementById('name_moto').setAttribute('value', 'Aprilia');
-  document.getElementById('prix_moto').setAttribute('value', 15000);
+  document.getElementById('prix_moto').setAttribute('value', 'Prix Moto 15000€');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/aprilia1480x800.png";
   }
@@ -280,6 +280,7 @@ function imgMoto1() {
 function imgMoto2() {
   let imageId = document.getElementById("image");
   document.getElementById('name_moto').setAttribute('value', 'Duccati');
+  document.getElementById('prix_moto').setAttribute('value', 'Prix Moto 25000€');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/Duccati1480x800.jpg";
   }
@@ -325,7 +326,7 @@ function imgFullBlue() {
 function retroYellow() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_retro').setAttribute('value', 'Jaune');
-  document.getElementById('prix_retro').setAttribute('value', 90);
+  document.getElementById('prix_retro').setAttribute('value','Prix rétroviseur 90€');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/constru.jpg";
   }
@@ -334,16 +335,16 @@ function retroYellow() {
 function retroBlue() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_retro').setAttribute('value', 'bleu');
-  document.getElementById('prix_retro').setAttribute('value', 80);
+  document.getElementById('prix_retro').setAttribute('value','Prix rétroviseur 80€');
   if (imageId.src !== undefined) {
-    imageId.src = "../assets/Images/img/constru.jpg";
+    imageId.src = "../assets/Images/img/moto1jauneRetrobleu.jpg";
   }
 }
 
 function retroGreen() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_retro').setAttribute('value', 'vert');
-  document.getElementById('prix_retro').setAttribute('value', 70);
+  document.getElementById('prix_retro').setAttribute('value','Prix rétroviseur 70€');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/constru.jpg";
   }
@@ -352,7 +353,7 @@ function retroGreen() {
 function retroRed() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_retro').setAttribute('value', 'rouge');
-  document.getElementById('prix_retro').setAttribute('value', 100);
+  document.getElementById('prix_retro').setAttribute('value', 'Prix rétroviseur 100€');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/constru.jpg";
   }
@@ -363,7 +364,7 @@ function retroRed() {
 function selleYellow() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_selle').setAttribute('value', 'Jaune');
-  document.getElementById('prix_selle').setAttribute('value', 190);
+  document.getElementById('prix_selle').setAttribute('value', 'Prix selle 390€');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/constru.jpg";
   }
@@ -372,16 +373,16 @@ function selleYellow() {
 function selleBlue() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_selle').setAttribute('value', 'bleu');
-  document.getElementById('prix_selle').setAttribute('value', 480);
+  document.getElementById('prix_selle').setAttribute('value', 'Prix selle 490€');
   if (imageId.src !== undefined) {
-    imageId.src = "../assets/Images/img/constru.jpg";
+    imageId.src = "../assets/Images/Jaune/moto-Y-Bl-Bl.jpg";
   }
 }
 
 function selleGreen() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_selle').setAttribute('value', 'vert');
-  document.getElementById('prix_selle').setAttribute('value', 570);
+  document.getElementById('prix_selle').setAttribute('value', 'Prix selle 470€');
   if (imageId.src !== undefined) {
     imageId.src = "../assets/Images/img/constru.jpg";
   }
@@ -390,9 +391,9 @@ function selleGreen() {
 function selleRed() {
   let imageId = document.getElementById("image");
   document.getElementById('couleur_selle').setAttribute('value', 'rouge');
-  document.getElementById('prix_selle').setAttribute('value', 700);
+  document.getElementById('prix_selle').setAttribute('value', 'Prix selle 700€');
   if (imageId.src !== undefined) {
-    imageId.src = "../assets/Images/img/constru.jpg";
+    imageId.src = "../assets/Images/img/motoJauneSellRouge.jpg";
   }
 }
 
