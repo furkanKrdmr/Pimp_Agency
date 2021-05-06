@@ -23,10 +23,21 @@ class LoginManager extends AbstractManager
 
         $valid = $statement->fetch();
 
-        if ($valid === false) {
+
+
+        if ($valid == false) {
             return -1;
         } else {
-            return $valid;
+            $isPasswordCorrect = ($password == $valid['password']);
+
+            if ($isPasswordCorrect) {
+                session_start();
+                $_SESSION['password'] = $valid['password'];
+                $_SESSION['email'] = $email;
+                return $valid;
+            } else {
+                return -1;
+            }
         }
     }
 }

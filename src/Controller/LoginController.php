@@ -59,7 +59,7 @@ class LoginController extends AbstractController
                 }
             }
         }
-        return $this->twig->render('Custom/custom.html.twig');
+        return 'impossible de se connecter avec ces identifiants';
     }
 
     public function deconnect()
