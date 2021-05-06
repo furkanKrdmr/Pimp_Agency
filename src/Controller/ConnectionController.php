@@ -20,27 +20,17 @@ class ConnectionController extends AbstractController
      * @throws \Twig\Error\SyntaxError
      */
 
-    public function save(array $data, array $errors): array
+    public function save(array $data, array $errors)
     {
-        if ($data['password'] != $data['cpwd']) {
+        if ($data['password'] !== $data['cpwd']) {
             $errors[] = "Le mot de passe n'est pas identique à sa confirmation";
-        }
-
-
-        if (strlen($data['password']) < 7) {
+        } elseif (strlen($data['password']) < 7) {
             $errors[] = "Le mot de passe doit faire plus de 6 caractères";
-        }
-
-        if (empty($data['firstname'])) {
+        } elseif (empty($data['firstname'])) {
             $errors[] = "Le prénom est obligatoire";
-        }
-
-        if (empty($data['lastname'])) {
+        } elseif (empty($data['lastname'])) {
             $errors[] = "Le nom est obligatoire";
-        }
-
-
-        if (!empty($data)) {
+        } elseif (!empty($data)) {
             $customer = array_map('trim', $data);
             $customer['lastname'] = htmlentities($customer['lastname']);
             $customer['firstname'] = htmlentities($customer['firstname']);
