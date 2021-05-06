@@ -2,6 +2,10 @@ body {
   margin: 0;
 }
 
+tr td {
+  margin: 0 auto;
+  display: inline-block;
+}
 
 /* Début css slider moto */
 

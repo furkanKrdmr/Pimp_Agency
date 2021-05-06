@@ -37,6 +37,3 @@ class RegistrationManager extends AbstractManager
         $statement->execute();
     }
 }
-/**
- * Update customer in database
- */

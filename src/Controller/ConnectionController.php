@@ -75,6 +75,7 @@ class ConnectionController extends AbstractController
                 $customer['email'],
                 $customer['password']
             );
+            header('Location: /login/login');
             return $this->twig->render(
                 'Connection/registration.html.twig',
                 ['accounts' => $accounts, 'errors' => $errors]
