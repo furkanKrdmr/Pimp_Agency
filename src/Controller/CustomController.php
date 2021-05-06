@@ -10,6 +10,7 @@
 namespace App\Controller;
 
 use App\Model\CustomManager;
+use App\Controller\LoginController;
 
 class CustomController extends AbstractController
 {
@@ -23,15 +24,36 @@ class CustomController extends AbstractController
      */
     public function custom()
     {
-        return $this->twig->render('Custom/custom.html.twig');
+        if (isset($_SESSION['id']) && $_SESSION['id'] > 0) {
+            return $this->twig->render('Custom/custom.html.twig', ['isConnected' => true]);
+        }
+        return $this->twig->render('Connection/login.html.twig');
     }
     public function saveConfig()
     {
         if ($_SERVER['REQUEST_METHOD'] === 'POST') {
             $item = array_map('trim', $_POST);
             $config = new CustomManager();
-            $configs = $config->insertConfig($item);
-            return $this->twig->render('Custom/custom.html.twig', ['configs', $configs]);
+            $configs = $config->insertConfig($item, $_SESSION['id']);
+            return $this->twig->render('Custom/custom.html.twig', ['configs' => $configs, 'isConnected' => true]);
+        }
+    }
+
+    public function showConfigs()
+    {
+        return $this->twig->render('Custom/showCustom.html.twig');
+    }
+
+    public function showConfigUser()
+    {
+        if (isset($_SESSION['id']) && $_SESSION['id'] > 0) {
+            $listCustom = new CustomManager();
+            $listCustoms = $listCustom->showConfigById($_SESSION['id']);
+
+            return $this->twig->render(
+                'Custom/showCustom.html.twig',
+                ['listCustoms' => $listCustoms, 'isConnected' => true]
+            );
         }
     }
 }

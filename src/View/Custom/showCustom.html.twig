@@ -1,0 +1,23 @@
+{% extends "layout.html.twig" %}
+{% block content %}
+
+<ul class="d-flex flex-column">
+
+{% set total = 0 %} 
+
+{% for listCustom in listCustoms %}
+<h1> Devis n° {{ listCustom.model_id }} </h1>
+    
+    <li> <strong> {{ listCustom.name_moto }}: </strong> {{ listCustom.prix_moto }} € </li> 
+    <li><strong> Couleur:</strong> {{listCustom.couleur_moto}} </li>
+    <li> <strong> Couleur Rétroviseurs: </strong> {{listCustom.couleur_retro}} {{ listCustom.prix_retro }} €</li>
+    <li> <strong> Couleur selle: </strong> {{listCustom.couleur_selle}} {{ listCustom.prix_selle }} € </li>
+    {% set total = listCustom.prix_moto + listCustom.prix_retro + listCustom.prix_selle %}
+    <br>
+    <li><h4>Prix Total: {{ total }} €</h4></li>
+    <br>
+    <br>
+    <br>
+{% endfor %}
+</ul>
+{% endblock %}

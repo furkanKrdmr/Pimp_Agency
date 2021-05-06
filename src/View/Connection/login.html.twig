@@ -1,26 +1,30 @@
-	{% extends "layout.html.twig" %}
+{% extends "layout.html.twig" %}
 
-	{% block content %}
-	<form action="/Login/login" method="POST">
+{% block content %}
+	<form action="/Login/signUp" method="POST" class="form-contact text-center d-flex justify-content-center flex-column">
 		<h2 class="text-center">Connexion</h2>
 
 		<p>Pour continuer sur notre site, veuillez vous identifier:</p>
-
-
+          
 		<div class="form-group">
 
-			<input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off"><br><br>
+			<input type="email" name="email" class="form-control" placeholder="Email" required="required" autocomplete="off"><br>
 		</div>
 
 		<div class="form-group">
 
-			<input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off"><br><br>
+			<input type="password" name="password" class="form-control" placeholder="Mot de passe" required="required" autocomplete="off"><br>
 		</div>
-
 
 		<div class="form-group">
-			<button type="submit" class="btn btn-primary btn-block">Connexion</button>
+			<button type="submit" class="btn btn-primary btn-block">Connexion</button><br><br>
 		</div>
-        <h6>Pas encore de compte ? <a href="#">Inscrivez-vous</a></h6
+
+		<div class="form-group">
+			<h6>Pas encore de compte ?
+
+				<a href="/Connection/registration">Inscrivez-vous</a>
+			</h6>
+		</div>
 	</div>
-	{% endblock %}
+{% endblock %}

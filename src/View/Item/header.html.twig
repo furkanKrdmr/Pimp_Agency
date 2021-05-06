@@ -1,4 +1,3 @@
-
 <nav class="navbar navbar-expand-md navbar-dark bg-dark sticky-top ">
 	<div class="logo">
 		<img src="/assets/Images/Logos/logo4.jpg" class="img-responsive w-65" alt="logo">
@@ -7,79 +6,87 @@
 		<span class="navbar-toggler-icon"></span>
 	</button>
 
-	<div class="  collapse navbar-collapse justify-content-around" id="navbarSupportedContent">
-		
-			<li class="nav-item active">
-				<a class="nav-link" href="/Home/index">Home
-					<span class="sr-only"></span>
-				</a>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/Custom/custom">Customisation</a>
-			</li>
-			<li class="nav-item dropdown">
+	<div class="  collapse navbar-collapse justify-content-between" id="navbarSupportedContent">
 
-				<div class="dropdown-menu" aria-labelledby="navbarDropdown"></li>
-			</li>
-			<li class="nav-item">
-				<a class="nav-link" href="/assets/Images/img/constru.jpg">Contacter Nous</a>
-			</li>
+		<li class="nav-item active">
+			<a class="nav-link" href="/Home/index">Home
+				<span class="sr-only"></span>
+			</a>
+		</li>
+		<li class="nav-item">
+			<a class="nav-link" href="/Custom/custom">Customisation</a>
+		</li>
+		<li class="nav-item dropdown">
 
-			<li class="nav-item dropdown">
-				<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
-					Compte Client
-				</a>
+			<div class="dropdown-menu" aria-labelledby="navbarDropdown"></li>
+		</li>
+		<li class="nav-item">
+			{% if isConnected > 0 %}
+						<a class="nav-link" href="/Custom/showConfigUser">Mes commandes</a>
+					{% endif %}
+		</li>
+
+		<li class="nav-item dropdown">
+			<a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-expanded="false">
+				Compte Client
+			</a>
 
 
-				<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
-					<li>
-						<a class="dropdown-item" href="/assets/Images/img/constru.jpg">Connection</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="/assets/Images/img/constru.jpg">Déconnection</a>
-					</li>
-					<li>
-						<a class="dropdown-item" href="/Connection/registration">Créer un compte</a>
-					</li>
-				</ul>
-			</li>
-		</div>
-		
-		<div class="container-nav d-none d-lg-block">
-			<ul class="icon">
+			<ul class="dropdown-menu" aria-labelledby="navbarDropdown">
 				<li>
+					{% if isConnected == 0 %}
+						<a class="dropdown-item" href="/Login/login">Connection</a>
+					{% endif %}
+				</li>
+				<li>
+					{% if isConnected > 0 %}
+						<a class="dropdown-item" href="/Login/deconnect">Déconnection</a>
+					{% endif %}
+
+				</li>
+				<li>
+					{% if isConnected == 0 %}
+						<a class="dropdown-item" href="/Connection/registration">Créer un compte</a>
+					{% endif %}
+				</li>
+			</ul>
+		</li>
+	</div>
+
+	<div class="container-nav d-none d-lg-block">
+		<ul class="icon">
+			<li>
 				<a href="/assets/Images/img/constru.jpg">
 					<span class="social-icon social-facebook">
 						<i class="fa fa-facebook"></i>
 					</span>
-					</a>
-				</li>
-				<li>
+				</a>
+			</li>
+			<li>
 				<a href="/assets/Images/img/constru.jpg">
 					<span class="social-icon social-twitter">
 						<i class="fa fa-twitter"></i>
 					</span>
-					</a>
-				</li>
-				<li>
+				</a>
+			</li>
+			<li>
 				<a href="/assets/Images/img/constru.jpg">
 					<span class="social-icon social-linkedin">
 						<i class="fa fa-linkedin"></i>
 					</span>
-					</a>
-				</li>
-				<li>
+				</a>
+			</li>
+			<li>
 				<a href="/assets/Images/img/constru.jpg">
 					<span class="social-icon social-instagram">
 						<i class="fa fa-instagram"></i>
 					</span>
-					</a>
-				</li>
+				</a>
+			</li>
 
-			</ul>
+		</ul>
 
-
-		</div>
 
 	</div>
-</nav>
+
+</div></nav>

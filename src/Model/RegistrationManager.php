@@ -9,6 +9,7 @@ class RegistrationManager extends AbstractManager
     /**
      * Insert new customer in database
      */
+
     public function insertCustomer(
         $lastname,
         $firstname,
@@ -36,8 +37,3 @@ class RegistrationManager extends AbstractManager
         $statement->execute();
     }
 }
-/**
- * Update customer in database
- */
-
-
