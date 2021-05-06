@@ -20,27 +20,17 @@ class ConnectionController extends AbstractController
      * @throws \Twig\Error\SyntaxError
      */
 
-    public function save(array $data, array $errors): array
+    public function save(array $data, array $errors)
     {
-        if ($data['password'] != $data['cpwd']) {
+        if ($data['password'] !== $data['cpwd']) {
             $errors[] = "Le mot de passe n'est pas identique à sa confirmation";
-        }
-
-
-        if (strlen($data['password']) < 7) {
+        } elseif (strlen($data['password']) < 7) {
             $errors[] = "Le mot de passe doit faire plus de 6 caractères";
-        }
-
-        if (empty($data['firstname'])) {
+        } elseif (empty($data['firstname'])) {
             $errors[] = "Le prénom est obligatoire";
-        }
-
-        if (empty($data['lastname'])) {
+        } elseif (empty($data['lastname'])) {
             $errors[] = "Le nom est obligatoire";
-        }
-
-
-        if (!empty($data)) {
+        } elseif (!empty($data)) {
             $customer = array_map('trim', $data);
             $customer['lastname'] = htmlentities($customer['lastname']);
             $customer['firstname'] = htmlentities($customer['firstname']);
@@ -54,33 +44,32 @@ class ConnectionController extends AbstractController
             return $customer;
         }
 
-
         return $errors;
     }
 
     public function saveRegistration(): string
     {
         $errors = [];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $customer = $this->save($_POST, $errors);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['lastname'])) {
+            $result = $this->save($_POST, $errors);
 
-            $account = new RegistrationManager();
-            $accounts = $account->insertCustomer(
-                $customer['lastname'],
-                $customer['firstname'],
-                $customer['address'],
-                $customer['postal_code'],
-                $customer['city'],
-                $customer['phone_number'],
-                $customer['email'],
-                $customer['password']
-            );
-            header('Location: /login/login');
-            return $this->twig->render(
-                'Connection/registration.html.twig',
-                ['accounts' => $accounts, 'errors' => $errors]
-            );
+            if (isset($result['lastname'])) {
+                $account = new RegistrationManager();
+                $accounts = $account->insertCustomer(
+                    $result['lastname'],
+                    $result['firstname'],
+                    $result['address'],
+                    $result['postal_code'],
+                    $result['city'],
+                    $result['phone_number'],
+                    $result['email'],
+                    $result['password']
+                );
+                header('Location: /login/login');
+                return $this->twig->render('Connection/registration.html.twig', ['accounts' => $accounts]);
+            }
         }
+
         return $this->twig->render('Connection/registration.html.twig');
     }
 

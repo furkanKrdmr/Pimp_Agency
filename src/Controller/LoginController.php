@@ -23,8 +23,18 @@ class LoginController extends AbstractController
      */
     public function login()
     {
-        return $this->twig->render('Connection/login.html.twig');
+        if (isset($_SESSION['id']) && $_SESSION['id'] > 0) {
+            header('Location: /Home/index');
+            return $this->twig->render('Home/index.html.twig', ['isConnected' => true]);
+        } else {
+            return $this->twig->render('Connection/login.html.twig');
+        }
     }
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> origin/dev
     public function signUp()
     {
         $errors  = [];
@@ -58,7 +68,7 @@ class LoginController extends AbstractController
                 }
             }
         }
-        return $this->twig->render('Custom/custom.html.twig');
+        return 'impossible de se connecter avec ces identifiants';
     }
 
     public function deconnect()
@@ -66,6 +76,6 @@ class LoginController extends AbstractController
         if (isset($_SESSION['id'])) {
             session_destroy();
         }
-            return $this->twig->render('Home/index.html.twig');
+        return $this->twig->render('Home/index.html.twig');
     }
 }

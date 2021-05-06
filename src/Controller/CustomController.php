@@ -31,11 +31,18 @@ class CustomController extends AbstractController
     }
     public function saveConfig()
     {
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
+        if (
+            $_SERVER['REQUEST_METHOD'] === 'POST'
+            && !empty($_POST['prix_moto'])
+            && !empty($_POST['prix_retro'])
+            && !empty($_POST['prix_selle'])
+        ) {
             $item = array_map('trim', $_POST);
             $config = new CustomManager();
             $configs = $config->insertConfig($item, $_SESSION['id']);
             return $this->twig->render('Custom/custom.html.twig', ['configs' => $configs, 'isConnected' => true]);
+        } else {
+            return 'veuillez selectionner des éléments';
         }
     }
 
