@@ -23,8 +23,14 @@ class LoginController extends AbstractController
      */
     public function login()
     {
-        return $this->twig->render('Connection/login.html.twig');
+        if (isset($_SESSION['id']) && $_SESSION['id'] > 0) {
+            header('Location: /Home/index');
+            return $this->twig->render('Home/index.html.twig', ['isConnected' => true]);
+        } else {
+            return $this->twig->render('Connection/login.html.twig');
+        }
     }
+
 
     public function signUp()
     {
@@ -67,6 +73,6 @@ class LoginController extends AbstractController
         if (isset($_SESSION['id'])) {
             session_destroy();
         }
-            return $this->twig->render('Home/index.html.twig');
+        return $this->twig->render('Home/index.html.twig');
     }
 }

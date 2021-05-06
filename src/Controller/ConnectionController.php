@@ -44,33 +44,32 @@ class ConnectionController extends AbstractController
             return $customer;
         }
 
-
         return $errors;
     }
 
     public function saveRegistration(): string
     {
         $errors = [];
-        if ($_SERVER['REQUEST_METHOD'] === 'POST') {
-            $customer = $this->save($_POST, $errors);
+        if ($_SERVER['REQUEST_METHOD'] === 'POST' && !empty($_POST['lastname'])) {
+            $result = $this->save($_POST, $errors);
 
-            $account = new RegistrationManager();
-            $accounts = $account->insertCustomer(
-                $customer['lastname'],
-                $customer['firstname'],
-                $customer['address'],
-                $customer['postal_code'],
-                $customer['city'],
-                $customer['phone_number'],
-                $customer['email'],
-                $customer['password']
-            );
-            header('Location: /login/login');
-            return $this->twig->render(
-                'Connection/registration.html.twig',
-                ['accounts' => $accounts, 'errors' => $errors]
-            );
+            if (isset($result['lastname'])) {
+                $account = new RegistrationManager();
+                $accounts = $account->insertCustomer(
+                    $result['lastname'],
+                    $result['firstname'],
+                    $result['address'],
+                    $result['postal_code'],
+                    $result['city'],
+                    $result['phone_number'],
+                    $result['email'],
+                    $result['password']
+                );
+                header('Location: /login/login');
+                return $this->twig->render('Connection/registration.html.twig', ['accounts' => $accounts]);
+            }
         }
+
         return $this->twig->render('Connection/registration.html.twig');
     }
 
