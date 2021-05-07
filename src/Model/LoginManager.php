@@ -31,7 +31,6 @@ class LoginManager extends AbstractManager
             $isPasswordCorrect = ($password == $valid['password']);
 
             if ($isPasswordCorrect) {
-                session_start();
                 $_SESSION['password'] = $valid['password'];
                 $_SESSION['email'] = $email;
                 return $valid;
