@@ -23,8 +23,6 @@ class LoginManager extends AbstractManager
 
         $valid = $statement->fetch();
 
-
-
         if ($valid == false) {
             return -1;
         } else {

@@ -30,11 +30,8 @@ class LoginController extends AbstractController
             return $this->twig->render('Connection/login.html.twig');
         }
     }
-<<<<<<< HEAD
-=======
 
 
->>>>>>> origin/dev
     public function signUp()
     {
         $errors  = [];
